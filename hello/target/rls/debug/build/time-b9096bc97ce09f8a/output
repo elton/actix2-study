@@ -1,0 +1,4 @@
+cargo:rustc-cfg=__time_02_supports_non_exhaustive
+cargo:rustc-cfg=__time_02_instant_checked_ops
+cargo:rustc-cfg=__time_02_nonzero_signed
+cargo:rustc-cfg=__time_02_use_trait_as_underscore

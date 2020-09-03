@@ -1,0 +1,12 @@
+/Volumes/data/study/rust/actix3-study/hello/target/debug/deps/crc32fast-a235093d2350edb5.rmeta: /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/lib.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/baseline.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/combine.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/mod.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/table.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/pclmulqdq.rs
+
+/Volumes/data/study/rust/actix3-study/hello/target/debug/deps/libcrc32fast-a235093d2350edb5.rlib: /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/lib.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/baseline.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/combine.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/mod.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/table.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/pclmulqdq.rs
+
+/Volumes/data/study/rust/actix3-study/hello/target/debug/deps/crc32fast-a235093d2350edb5.d: /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/lib.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/baseline.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/combine.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/mod.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/table.rs /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/pclmulqdq.rs
+
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/lib.rs:
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/baseline.rs:
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/combine.rs:
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/mod.rs:
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/table.rs:
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.0/src/specialized/pclmulqdq.rs:

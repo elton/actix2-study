@@ -1,0 +1,5 @@
+/Volumes/data/study/rust/actix3-study/hello/target/rls/debug/deps/language_tags-af47429ee641af5c.rmeta: /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/language-tags-0.2.2/src/lib.rs
+
+/Volumes/data/study/rust/actix3-study/hello/target/rls/debug/deps/language_tags-af47429ee641af5c.d: /Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/language-tags-0.2.2/src/lib.rs
+
+/Users/elton/.cargo/registry/src/github.com-1ecc6299db9ec823/language-tags-0.2.2/src/lib.rs:
