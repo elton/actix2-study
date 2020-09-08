@@ -47,6 +47,24 @@ async fn counter(data: web::Data<AppStateWithCounter>) -> String {
     format!("Request number: {}", counter) // <- response with count
 }
 
+// this function could be located in different module
+fn scoped_config(cfg: &mut web::ServiceConfig) {
+    cfg.service(
+        web::resource("/test")
+            .route(web::get().to(|| HttpResponse::Ok().body("test")))
+            .route(web::head().to(|| HttpResponse::MethodNotAllowed())),
+    );
+}
+
+// this function could be located in different module
+fn config(cfg: &mut web::ServiceConfig) {
+    cfg.service(
+        web::resource("/app2")
+            .route(web::get().to(|| HttpResponse::Ok().body("app")))
+            .route(web::head().to(|| HttpResponse::MethodNotAllowed())),
+    );
+}
+
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
     let c = web::Data::new(AppStateWithCounter {
@@ -63,6 +81,7 @@ async fn main() -> std::io::Result<()> {
                 app_name: String::from("Actix-web"),
             })
             // 进程级别共享，共享的类型需要实现 线程交换安全，可用于读写场景，如计数器。通过 .app_data(T) 初始化
+            // 必须把Mutex的变量move进 Httpserver里
             .app_data(c.clone())
             .route("/", web::get().to(index))
             .route("/again", web::get().to(index2))
@@ -72,6 +91,10 @@ async fn main() -> std::io::Result<()> {
             // 只读
             .route("/app_state", web::get().to(app_state))
             .route("/counter", web::get().to(counter))
+            // 为了简单和可重用，App和web :: Scope都提供了configure方法。
+            // 此功能对于将配置的部分移动到其他模块甚至库中很有用。例如，某些资源的配置可以移至其他模块。
+            .configure(config)
+            .service(web::scope("/api").configure(scoped_config))
     })
     .bind("127.0.0.1:8088")?
     .run()
