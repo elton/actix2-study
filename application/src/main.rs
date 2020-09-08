@@ -28,8 +28,9 @@ async fn index4() -> impl Responder {
 }
 
 // curl http://localhost:8088/app_state
-async fn app_state(data: web::Data<AppState>) -> impl Responder {
-    HttpResponse::Ok().body(&data.app_name)
+async fn app_state(data: web::Data<AppState>) -> String {
+    let app_name = &data.app_name; // <- get app_name
+    format!("Hello {}", app_name) // <- response with app_name
 }
 
 use std::sync::Mutex;
@@ -57,6 +58,7 @@ async fn main() -> std::io::Result<()> {
             // 所以不同线程的 data 不是同一个实例，所以不是进程级别共享数据，而是线程级别的共享数据
             // 线程级别共享，共享的类型不用实现 线程交换安全，.data(T) 只能用于只读
             // 因此只能用于访问只读数据，如全局配置等
+            // Application state is shared with all routes and resources within the same scope.
             .data(AppState {
                 app_name: String::from("Actix-web"),
             })
