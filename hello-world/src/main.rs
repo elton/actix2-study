@@ -18,6 +18,11 @@ async fn index3() -> impl Responder {
     HttpResponse::Ok().body("Hey there!")
 }
 
+// curl http://localhost:8088/app/index.html
+async fn index4() -> impl Responder {
+    HttpResponse::Ok().body("use scope 'app'.")
+}
+
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
@@ -25,6 +30,8 @@ async fn main() -> std::io::Result<()> {
             .route("/", web::get().to(index))
             .route("/again", web::get().to(index2))
             .service(index3)
+            // 添加了统一的`scope` url前缀
+            .service(web::scope("app").route("index.html", web::get().to(index4)))
     })
     .bind("127.0.0.1:8088")?
     .run()
