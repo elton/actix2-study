@@ -45,7 +45,7 @@ struct JsonInfo {
 // curl -i -H 'Content-Type: application/json' -d '{"username": "xiaoming"}' -X POST http://localhost:8088/extractor/json
 // curl -i -H 'Content-Type: application/json' -d '{"username": 1}' -X POST http://localhost:8088/extractor/json
 async fn extractor_json(info: web::Json<JsonInfo>) -> String {
-    format!("{:?}", info)
+    format!("{}", info.username)
 }
 
 #[derive(Deserialize, Debug)]
